@@ -98,6 +98,7 @@ At the end of the process, the vehicle is able to drive autonomously around the 
 #### 2. Final Model Architecture
 
 The final model architecture (model.py lines 103-124) consisted of a convolution neural network with the following layers and layer sizes:
+
 ![alt text][image6]
 
 Here is a visualization of the architecture.
@@ -113,7 +114,9 @@ To capture good driving behavior, I first recorded two laps on track one using c
 I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to .... These images show what a recovery looks like starting from ... :
 
 ![alt text][image7]
+
 ![alt text][image8]
+
 ![alt text][image9]
 
 To augment the data sat, I also flipped images and angles thinking that this would ... For example, here is an image that has then been flipped:
@@ -129,8 +132,9 @@ After the collection process, I had 8036 number of data points. Using left and r
 Then I preprocessed this data by cropping the input image to feed the model with more useful part of input image, which is road and lane lines part of images. And also I used a lambda layer to implement normalization that helps to stablizing the learning process and reduces the number of training epochs through reduce "*internal covariate shift*".
 
 Here is an example of what input looks like after cropping it (25 from bottom and 55 from top of image).
+
 ![alt text][image4]
 
 I finally randomly shuffled the data set and put 20% of the data into a validation set. 
 
-I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was Z as evidenced by ... I used an adam optimizer so that manually training the learning rate wasn't necessary.
+I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was around 5 as evidenced by the reaching to best fit point, so after that the validation error starts to jumpping up and down. I used an adam optimizer so that manually training the learning rate wasn't necessary.
