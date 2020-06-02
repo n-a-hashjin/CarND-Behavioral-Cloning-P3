@@ -2,7 +2,7 @@
 
 ## Self Driving Car Nanodegree
 
-### Nasser Azarbakhsh HAshjin
+### Nasser Azarbakhsh Hashjin
 
 ---
 
